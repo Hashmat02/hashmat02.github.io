@@ -117,8 +117,8 @@
     <section id="news" class="py-16 bg-gray-50">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">News & Updates</h2>
-            <!-- Scrollable container with max height -->
-            <div class="bg-white border border-gray-200 rounded-lg p-6 max-h-96 overflow-y-auto">
+            <!-- Scrollable container with max height and visible scrollbar -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 max-h-96 overflow-y-scroll" style="scrollbar-width: thin; scrollbar-color: #3b82f6 #f3f4f6;">
                 <div class="space-y-4">
                     <div class="border-l-4 border-blue-600 pl-4 py-1">
                         <p class="text-xs text-gray-500">November 2025</p>
@@ -134,8 +134,56 @@
                         <p class="text-xs text-gray-500">May 2025</p>
                         <p class="text-sm text-gray-800 font-medium">Graduated from LUMS with B.S. in Computer Science</p>
                     </div>
+
+                    <div class="border-l-4 border-blue-600 pl-4 py-1">
+                        <p class="text-xs text-gray-500">January 2025</p>
+                        <p class="text-sm text-gray-800 font-medium">Appointed as Teaching Assistant for CS5302 Foundations of Generative AI</p>
+                    </div>
+
+                    <div class="border-l-4 border-blue-600 pl-4 py-1">
+                        <p class="text-xs text-gray-500">January 2025</p>
+                        <p class="text-sm text-gray-800 font-medium">Appointed as Teaching Assistant for AI600 Machine Learning (MS in AI)</p>
+                    </div>
+
+                    <div class="border-l-4 border-blue-600 pl-4 py-1">
+                        <p class="text-xs text-gray-500">September 2024</p>
+                        <p class="text-sm text-gray-800 font-medium">Appointed as Teaching Assistant for CS535 Machine Learning</p>
+                    </div>
+
+                    <div class="border-l-4 border-blue-600 pl-4 py-1">
+                        <p class="text-xs text-gray-500">September 2023</p>
+                        <p class="text-sm text-gray-800 font-medium">Joined AI in Healthcare Initiative (AIHI) as a Research Assistant</p>
+                    </div>
+
+                    <div class="border-l-4 border-blue-600 pl-4 py-1">
+                        <p class="text-xs text-gray-500">September 2023</p>
+                        <p class="text-sm text-gray-800 font-medium">Joined Center for Speech and Language Technologies (CSaLT) as a Research Assistant</p>
+                    </div>
+
+                    <div class="border-l-4 border-blue-600 pl-4 py-1">
+                        <p class="text-xs text-gray-500">September 2023</p>
+                        <p class="text-sm text-gray-800 font-medium">Appointed as Teaching Assistant for CS100 Computational Problem Solving</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- Custom scrollbar styling for webkit browsers -->
+            <style>
+                #news .overflow-y-scroll::-webkit-scrollbar {
+                    width: 8px;
+                }
+                #news .overflow-y-scroll::-webkit-scrollbar-track {
+                    background: #f3f4f6;
+                    border-radius: 4px;
+                }
+                #news .overflow-y-scroll::-webkit-scrollbar-thumb {
+                    background: #3b82f6;
+                    border-radius: 4px;
+                }
+                #news .overflow-y-scroll::-webkit-scrollbar-thumb:hover {
+                    background: #2563eb;
+                }
+            </style>
         </div>
     </section>
 
