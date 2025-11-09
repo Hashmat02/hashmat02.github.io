@@ -117,8 +117,7 @@
     <section id="news" class="py-16 bg-gray-50">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">News & Updates</h2>
-            <!-- Scrollable container with max height and visible scrollbar -->
-            <div class="news-scrollable bg-white border border-gray-200 rounded-lg p-6 max-h-96 overflow-y-scroll">
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
                 <div class="space-y-4">
                     <div class="border-l-4 border-blue-600 pl-4 py-1">
                         <p class="text-xs text-gray-500">November 2025</p>
@@ -166,49 +165,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Custom scrollbar styling - Always visible -->
-            <style>
-                /* Firefox - always show scrollbar */
-                .news-scrollable {
-                    scrollbar-width: auto;
-                    scrollbar-color: #3b82f6 #e5e7eb;
-                    scrollbar-gutter: stable;
-                }
-
-                /* Webkit browsers (Chrome, Safari) - FORCE always visible scrollbar */
-                .news-scrollable::-webkit-scrollbar {
-                    width: 16px;
-                    -webkit-appearance: none;
-                    appearance: none;
-                }
-
-                .news-scrollable::-webkit-scrollbar-track {
-                    background: #e5e7eb;
-                    border-radius: 0;
-                    border-left: 1px solid #d1d5db;
-                }
-
-                .news-scrollable::-webkit-scrollbar-thumb {
-                    background: #3b82f6;
-                    border-radius: 0;
-                    border: 3px solid #e5e7eb;
-                    min-height: 40px;
-                }
-
-                .news-scrollable::-webkit-scrollbar-thumb:hover {
-                    background: #2563eb;
-                }
-
-                .news-scrollable::-webkit-scrollbar-thumb:active {
-                    background: #1d4ed8;
-                }
-
-                /* Remove any auto-hide behavior */
-                .news-scrollable::-webkit-scrollbar-track-piece {
-                    background: #e5e7eb;
-                }
-            </style>
         </div>
     </section>
 
