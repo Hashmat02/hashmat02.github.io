@@ -4,1111 +4,377 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abdullah Hashmat | AI/ML/LLM/NLP Research & Development</title>
-    <meta name="description" content="Portfolio of Abdullah Hashmat — AI researcher and full-stack developer specializing in machine learning, natural language processing, and large language models.">
+    <title>Abdullah Hashmat | AI/ML Research</title>
+    <meta name="description" content="Abdullah Hashmat - AI researcher specializing in machine learning, natural language processing, and large language models.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-gray-800 min-h-screen">
-
+<body class="bg-white text-gray-900 font-['Inter',sans-serif]">
 
     <!-- NAVBAR -->
-<nav class="fixed top-0 left-0 w-full bg-white/40 backdrop-blur-md shadow-sm z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
-      <!-- Logo / Name -->
-      <a href="#hero" class="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-        Abdullah Hashmat
-      </a>
-  
-      <!-- Desktop Menu -->
-      <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
-        <a href="#about" class="hover:text-blue-600 transition">About</a>
-        <a href="#pakbbq" class="hover:text-blue-600 transition">Publications</a>
-        <a href="#research" class="hover:text-blue-600 transition">Research Interests</a>
-        <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
-        <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
-      </div>
-  
-      <!-- Mobile Menu Button -->
-      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
-        <i data-lucide="menu" class="w-6 h-6"></i>
-      </button>
-    </div>
-  
-    <!-- Mobile Menu Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden flex-col items-center space-y-4 pb-4 bg-white/70 backdrop-blur-md">
-      <a href="#about" class="block hover:text-blue-600 transition">About</a>
-      <a href="#pakbbq" class="block hover:text-blue-600 transition">Publication
-      </a>
-      <a href="#research" class="block hover:text-blue-600 transition">Research</a>
-      <a href="#skills" class="block hover:text-blue-600 transition">Skills</a>
-      <a href="#projects" class="block hover:text-blue-600 transition">Projects</a>
-    </div>
-  </nav>
-  
+    <nav class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-50">
+        <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+            <a href="#home" class="text-xl font-semibold text-gray-900">Abdullah Hashmat</a>
 
-    <!-- HERO -->
-    <header id="hero"
-        class="relative bg-gradient-to-br from-blue-500 via-indigo-400 to-purple-500 text-white text-center py-24 overflow-hidden">
-        <div class="absolute inset-0 bg-white/20 backdrop-blur-sm"></div>
-        <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-        <div class="absolute bottom-20 right-20 w-32 h-32 bg-purple-300/20 rounded-full blur-2xl animate-bounce"></div>
-        <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-cyan-300/20 rounded-full blur-lg animate-ping"></div>
+            <div class="hidden md:flex space-x-8 text-sm">
+                <a href="#about" class="text-gray-600 hover:text-gray-900 transition">About</a>
+                <a href="#news" class="text-gray-600 hover:text-gray-900 transition">News</a>
+                <a href="#publications" class="text-gray-600 hover:text-gray-900 transition">Publications</a>
+                <a href="#research" class="text-gray-600 hover:text-gray-900 transition">Research</a>
+                <a href="#projects" class="text-gray-600 hover:text-gray-900 transition">Projects</a>
+            </div>
 
-        <div class="relative z-10">
-            <h1
-                class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent drop-shadow-lg">
-                Hi, I'm <span class="text-yellow-200 animate-pulse">Abdullah Hashmat</span>
-            </h1>
-            <h2 class="mt-8 text-2xl md:text-3xl font-light text-blue-50">
-                <span id="dynamic-text" class="border-r-2 border-yellow-200 pr-1"></span>
-            </h2>
+            <button id="menu-btn" class="md:hidden text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
 
-        <!-- Bot Animation (inside hero so it stays there) -->
-        <div id="bot-animation"
-            style="position: absolute; top: 0; left: 0; width:150px; height:150px; z-index:50; pointer-events:none;">
-            <dotlottie-wc src="https://lottie.host/2f57ab81-a69d-4d24-9361-0cba62d4af50/GJl1XqVNoA.lottie"
-                style="width: 100%; height: 100%;" autoplay loop speed="1">
-            </dotlottie-wc>
+        <div id="mobile-menu" class="hidden md:hidden flex-col items-center space-y-4 pb-4 border-t border-gray-200 mt-2">
+            <a href="#about" class="block text-gray-600 hover:text-gray-900 transition">About</a>
+            <a href="#news" class="block text-gray-600 hover:text-gray-900 transition">News</a>
+            <a href="#publications" class="block text-gray-600 hover:text-gray-900 transition">Publications</a>
+            <a href="#research" class="block text-gray-600 hover:text-gray-900 transition">Research</a>
+            <a href="#projects" class="block text-gray-600 hover:text-gray-900 transition">Projects</a>
+        </div>
+    </nav>
+
+    <!-- HERO / HEADER -->
+    <header id="home" class="pt-32 pb-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-start gap-12">
+                <!-- Profile Image -->
+                <div class="flex-shrink-0">
+                    <img src="Images/DSC_4708 2.jpg" alt="Abdullah Hashmat"
+                        class="w-64 h-64 object-cover rounded-lg shadow-sm border border-gray-200">
+                </div>
+
+                <!-- Info -->
+                <div class="flex-1">
+                    <h1 class="text-4xl font-bold text-gray-900 mb-4">Abdullah Hashmat</h1>
+                    <p class="text-xl text-gray-600 mb-6">Research Assistant | AI/ML Researcher</p>
+
+                    <div class="space-y-3 text-gray-700 mb-8">
+                        <p>DFKI Germany & RPTU Kaiserslautern-Landau</p>
+                        <p>B.S. Computer Science, LUMS (2025)</p>
+                        <p>
+                            <a href="mailto:abdullah.hashmat02@gmail.com" class="text-blue-600 hover:underline">abdullah.hashmat02@gmail.com</a>
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <a href="Abdullah-Hashmat-CV.pdf" target="_blank"
+                            class="px-6 py-2 bg-gray-900 text-white rounded hover:bg-gray-800 transition text-sm font-medium">
+                            CV
+                        </a>
+                        <a href="Abdullah-Hashmat-Academic-CV.pdf" target="_blank"
+                            class="px-6 py-2 border border-gray-900 text-gray-900 rounded hover:bg-gray-50 transition text-sm font-medium">
+                            Academic CV
+                        </a>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <a href="https://github.com/Hashmat02" target="_blank" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/abdullah-hashmat" target="_blank" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- DotLottie Web Component -->
-    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
-
-    <script>
-        const bot = document.getElementById('bot-animation');
-        const hero = document.getElementById('hero');
-
-        function moveBotRandomly() {
-            const heroRect = hero.getBoundingClientRect();
-            const heroWidth = hero.clientWidth - bot.clientWidth;
-            const heroHeight = hero.clientHeight - bot.clientHeight;
-
-            const padding = 20;
-            const randomX = Math.random() * (heroWidth - padding * 2) + padding;
-            const randomY = Math.random() * (heroHeight - padding * 2) + padding;
-
-            bot.style.transition = 'transform 2.5s ease-in-out';
-            bot.style.transform = `translate(${randomX}px, ${randomY}px)`;
-        }
-
-        moveBotRandomly();
-        setInterval(moveBotRandomly, 3000);
-    </script>
-
-
-
-
     <!-- ABOUT -->
-    <section id="about" class="max-w-6xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center gap-16">
-        <!-- Profile Image -->
-        <div class="flex-shrink-0 relative">
-            <div
-                class="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-xl blur-lg opacity-30 animate-pulse">
-            </div>
-            <img src="Images/DSC_4708 2.jpg" alt="Abdullah Hashmat"
-                class="relative w-96 h-96 object-cover rounded-xl shadow-2xl hover:scale-105 transition-all duration-500 border-4 border-white ring-4 ring-blue-200/50">
-        </div>
-
-
-
-        <!-- About Content -->
-        <div class="flex-1 text-center md:text-left">
-            <h2
-                class="text-4xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-blue-600 bg-clip-text text-transparent">
-                About Me
-            </h2>
-            <p class="text-lg text-gray-600 leading-relaxed mb-8 max-w-2xl">
-                Hi, I’m Abdullah Hashmat, a Computer Science graduate from LUMS specializing in model compression, NLP
-                for low-resource languages, and LLM bias & jailbreak evaluations. Currently working as a Research
-                Assistant for DKFI Germany in collaboration with RPTU in the domian of bioinformatics, exploring the use
-                of LLMS and ML models for molecular property prediction.
-                I have experience in full-stack development, cloud technologies, and AI/ML research, working with tools
-                like Python, PyTorch, AWS, and the MERN stack.
-            </p>
-            <p class="text-lg text-gray-600 leading-relaxed mb-8 max-w-2xl">
-                My projects include confidence-aware knowledge distillation to mitigate shape/texture bias in vision
-                models, evaluating jailbreak techniques on small scale LLMs, and developing AI solutions for speech
-                processing and analytics.
-
-                For my final year thesis, I created PakBBQ, a bias benchmarking QA dataset with 17,180 Urdu/English
-                examples across 8 sociocultural categories and evaluated 6 multilingual LLMs, revealing cross linguistic
-                bias gaps and effective bias mitigation strategies.
-            </p>
-            <p class="text-lg text-gray-600 leading-relaxed mb-8 max-w-2xl">
-                I’m passionate about building fair, efficient, and deployable AI flows that solve real world problems.
-            </p>
-
-            <!-- Action Buttons -->
-            <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                <a href="Abdullah-Hashmat-CV.pdf" target="_blank" rel="noopener noreferrer"
-                    class="group px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-400 to-green-500 text-white font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                    <i data-lucide="file-text" class="inline-block mr-2 group-hover:rotate-12 transition-transform"></i>
-                    Resume
-                </a>
-
-                <a href="Abdullah-Hashmat-Academic-CV.pdf" target="_blank" rel="noopener noreferrer"
-                    class="group px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-400 to-indigo-500 text-white font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                    <i data-lucide="book-open" class="inline-block mr-2 group-hover:rotate-12 transition-transform"></i>
-                    Academic CV
-                </a>
-
-                <!-- Social buttons -->
-                <a href="https://www.linkedin.com/in/abdullah-hashmat" target="_blank" rel="noopener noreferrer"
-                    class="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-r from-blue-400 to-cyan-400 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-2 hover:rotate-6 transition-all duration-300"
-                    aria-label="LinkedIn">
-                    <i data-lucide="linkedin" class="w-6 h-6"></i>
-                </a>
-                <a href="https://github.com/Hashmat02" target="_blank" rel="noopener noreferrer"
-                    class="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-r from-gray-600 to-slate-700 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-2 hover:rotate-6 transition-all duration-300"
-                    aria-label="GitHub">
-                    <i data-lucide="github" class="w-6 h-6"></i>
-                </a>
-                <a href="mailto:abdullah.hashmat02@gmail.com"
-                    class="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-r from-pink-400 to-rose-400 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-2 hover:rotate-6 transition-all duration-300"
-                    aria-label="Email">
-                    <i data-lucide="mail" class="w-6 h-6"></i>
-                </a>
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">About</h2>
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    I am a Computer Science graduate from LUMS specializing in model compression, NLP for low-resource languages, and LLM bias & jailbreak evaluations. Currently working as a Research Assistant for DFKI Germany in collaboration with RPTU in the domain of bioinformatics, exploring the use of LLMs and ML models for molecular property prediction.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    My research interests include confidence-aware knowledge distillation to mitigate shape/texture bias in vision models, evaluating jailbreak techniques on small-scale LLMs, and developing AI solutions for speech processing and analytics.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    For my final year thesis, I created PakBBQ, a bias benchmarking QA dataset with 17,180 Urdu/English examples across 8 sociocultural categories. I evaluated 6 multilingual LLMs, revealing cross-linguistic bias gaps and effective bias mitigation strategies.
+                </p>
             </div>
         </div>
     </section>
 
+    <!-- NEWS & UPDATES -->
+    <section id="news" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">News & Updates</h2>
+            <div class="space-y-6">
+                <div class="border-l-4 border-blue-600 pl-6 py-2">
+                    <p class="text-sm text-gray-500 mb-1">November 2025</p>
+                    <p class="text-gray-800 font-medium">Paper accepted at EMNLP 2025 Main Conference</p>
+                    <p class="text-gray-600 text-sm mt-1">Our work on PakBBQ: A Culturally Adapted Bias Benchmark for QA has been accepted at EMNLP 2025 (Core: A*).</p>
+                </div>
 
-<!-- RESEARCH PAPER -->
-<section id="pakbbq"
-    class="orbital-container bg-gradient-to-br from-white via-blue-50 to-indigo-100 py-24 relative overflow-hidden">
-    
-    <!-- Background decorative elements -->
-    <div
-        class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-200/30 to-transparent rounded-full blur-3xl">
-    </div>
-    <div
-        class="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-purple-200/30 to-transparent rounded-full blur-3xl">
-    </div>
+                <div class="border-l-4 border-blue-600 pl-6 py-2">
+                    <p class="text-sm text-gray-500 mb-1">June 2025</p>
+                    <p class="text-gray-800 font-medium">Started as Research Assistant at DFKI Germany</p>
+                    <p class="text-gray-600 text-sm mt-1">Joined DFKI in collaboration with RPTU to work on LLMs for molecular property prediction in bioinformatics.</p>
+                </div>
 
-    <div class="relative max-w-7xl mx-auto px-6">
-        <!-- Heading -->
-        <h1
-            class="text-5xl md:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-            EMNLP 2025
-        </h1>
-        <p class="text-center text-gray-600 text-lg mb-16 max-w-3xl mx-auto">
-            Featured research contribution in multilingual bias evaluation for low-resource languages. Accepted at the Main Conference of EMNLP 2025 (Core: A*).
-        </p>
-
-        <!-- Research Card -->
-        <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100 max-w-4xl mx-auto hover:shadow-2xl transition-all duration-500">
-            <h3 class="text-3xl font-bold mb-4 text-gray-800">
-                PakBBQ: A Culturally Adapted Bias Benchmark for QA
-            </h3>
-            <p class="text-sm text-gray-500 italic mb-4">
-                TL;DR: A culturally adapted question answering bias benchmark in English and Urdu for Pakistan, revealing language, cultural, and context-specific disparities in multilingual LLMs.
-            </p>
-            <p class="text-gray-600 leading-relaxed mb-4">
-                With the widespread adoption of Large Language Models (LLMs), it’s crucial to ensure fairness across all user communities. Most LLMs are trained on Western-centric data, neglecting low-resource languages and regional contexts. To address this, we introduce PakBBQ — an extension of the Bias Benchmark for Question Answering (BBQ) dataset — featuring 214 templates and 17,180 QA pairs in English and Urdu across 8 bias dimensions: age, disability, appearance, gender, socio-economic status, religion, regional affiliation, and language formality.
-            </p>
-            <p class="text-gray-600 leading-relaxed mb-4">
-                Our experiments show: (i) a 12% accuracy gain with disambiguation, (ii) stronger counter-bias behaviors in Urdu, and (iii) framing effects reducing stereotypes in negatively posed questions. This highlights the importance of contextualized benchmarks and simple prompt strategies for bias mitigation in low-resource settings.
-            </p>
-            <a href="PakBBQ A Culturally Adapted Bias Benchmark for QA.pdf" 
-               target="_blank" 
-               class="inline-block mt-4 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
-                📄 Preprint
-            </a>
+                <div class="border-l-4 border-blue-600 pl-6 py-2">
+                    <p class="text-sm text-gray-500 mb-1">May 2025</p>
+                    <p class="text-gray-800 font-medium">Graduated from LUMS</p>
+                    <p class="text-gray-600 text-sm mt-1">Completed B.S. in Computer Science from Lahore University of Management Sciences.</p>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Publications</h2>
 
-    
+            <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    PakBBQ: A Culturally Adapted Bias Benchmark for QA
+                </h3>
+                <p class="text-gray-600 mb-4">
+                    <span class="font-medium">EMNLP 2025</span> (Main Conference, Core: A*)
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    With the widespread adoption of Large Language Models (LLMs), it's crucial to ensure fairness across all user communities. Most LLMs are trained on Western-centric data, neglecting low-resource languages and regional contexts. To address this, we introduce PakBBQ — an extension of the Bias Benchmark for Question Answering (BBQ) dataset — featuring 214 templates and 17,180 QA pairs in English and Urdu across 8 bias dimensions: age, disability, appearance, gender, socio-economic status, religion, regional affiliation, and language formality.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Our experiments show: (i) a 12% accuracy gain with disambiguation, (ii) stronger counter-bias behaviors in Urdu, and (iii) framing effects reducing stereotypes in negatively posed questions.
+                </p>
+                <div class="flex gap-4">
+                    <a href="PakBBQ A Culturally Adapted Bias Benchmark for QA.pdf" target="_blank"
+                        class="text-blue-600 hover:underline text-sm font-medium">
+                        [PDF]
+                    </a>
+                    <a href="https://anonymous.4open.science/r/PakBBQ-Bias-Benchmarking-QA-Dataset-DBA5/README.md" target="_blank"
+                        class="text-blue-600 hover:underline text-sm font-medium">
+                        [Code]
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- RESEARCH INTERESTS -->
-    <section id="research"
-        class="orbital-container bg-gradient-to-br from-white via-blue-50 to-indigo-100 py-24 relative overflow-hidden">
-        <!-- Background decorative elements -->
-        <div
-            class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-200/30 to-transparent rounded-full blur-3xl">
-        </div>
-        <div
-            class="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-purple-200/30 to-transparent rounded-full blur-3xl">
-        </div>
+    <section id="research" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Research Interests</h2>
 
-        <div class="relative max-w-7xl mx-auto px-6">
-            <h1
-                class="text-5xl md:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Research Interests
-            </h1>
-            <p class="text-center text-gray-600 text-lg mb-16 max-w-3xl mx-auto">
-                Domains I’m deeply interested in and currently delving into within the constantly evolving landscape of
-                artificial intelligence.
-            </p>
-
-            <!-- Grid Layout -->
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-
-                <!-- Card 1 -->
-                <div
-                    class="orbital-card group bg-white/70 backdrop-blur-lg rounded-3xl p-8 hover:scale-105 hover:rotate-1 transition-all duration-500 shadow-lg hover:shadow-2xl border border-blue-100">
-                    <div class="orbital-text">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div
-                                class="bg-gradient-to-r from-indigo-400 to-purple-500 p-4 rounded-2xl group-hover:rotate-12 transition-transform duration-300">
-                                <i data-lucide="brain" class="text-white w-7 h-7"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800 group-hover:text-indigo-600 transition-colors">
-                                Large Language Models</h3>
-                        </div>
-                        <ul class="space-y-4 text-gray-600">
-                            <li class="flex items-center gap-2">
-                                <span class="w-2 h-2 bg-amber-400 rounded-full"></span>
-                                <!-- Reasoning & AI Safety <span class="tag bg-gradient-to-r from-amber-100 to-orange-100 text-amber-700 border border-amber-200">Really into this!</span> -->
-                                LLM Biases
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-2 h-2 bg-pink-400 rounded-full"></span>
-                                <!-- Mechanistic Interpretability <span class="tag bg-gradient-to-r from-pink-100 to-rose-100 text-pink-700 border border-pink-200">Love it!</span> -->
-                                Jailbreaking & Robustness
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-2 h-2 bg-green-400 rounded-full"></span>
-                                <!-- Architectural Optimisation <span class="tag bg-gradient-to-r from-green-100 to-emerald-100 text-green-700 border border-green-200">All day!</span> -->
-                                Architectural Optimisation
-                            </li>
-                        </ul>
-                    </div>
+            <div class="grid gap-8 md:grid-cols-2">
+                <div class="border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Large Language Models</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            <span>LLM Biases and Fairness</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            <span>Jailbreaking & Robustness</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            <span>Architectural Optimization</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- Card 2 -->
-                <div
-                    class="orbital-card group bg-white/70 backdrop-blur-lg rounded-3xl p-8 hover:scale-105 hover:rotate-1 transition-all duration-500 shadow-lg hover:shadow-2xl border border-blue-100">
-                    <div class="orbital-text">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div
-                                class="bg-gradient-to-r from-blue-400 to-cyan-500 p-4 rounded-2xl group-hover:rotate-12 transition-transform duration-300">
-                                <i data-lucide="package" class="text-white w-7 h-7"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">Bias
-                                Mitigation in Model Compression</h3>
-                        </div>
-                        <ul class="space-y-4 text-gray-600">
-                            <li class="flex items-center gap-2">
-                                <span class="w-2 h-2 bg-blue-400 rounded-full"></span>
-                                <!-- Knowledge Distillation <span class="tag bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-700 border border-blue-200">Lots of work</span> -->
-                                Knowledge Distillation Frameworks
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-2 h-2 bg-red-400 rounded-full"></span>
-                                <!-- Compression for LLMs <span class="tag bg-gradient-to-r from-red-100 to-rose-100 text-red-700 border border-red-200">Exploring</span> -->
-                                Model Sprasity
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-2 h-2 bg-orange-400 rounded-full"></span>
-                                <!-- Model Sparsity <span class="tag bg-gradient-to-r from-orange-100 to-amber-100 text-orange-700 border border-orange-200">Love this!</span> -->
-                                OOD Generalizable Vision Models
-                            </li>
-                        </ul>
-                    </div>
+                <div class="border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Model Compression</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            <span>Knowledge Distillation Frameworks</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            <span>Model Sparsity</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            <span>OOD Generalizable Vision Models</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- Card 3 -->
-                <div
-                    class="orbital-card group bg-white/70 backdrop-blur-lg rounded-3xl p-8 hover:scale-105 hover:rotate-1 transition-all duration-500 shadow-lg hover:shadow-2xl border border-blue-100">
-                    <div class="orbital-text">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div
-                                class="bg-gradient-to-r from-green-400 to-emerald-500 p-4 rounded-2xl group-hover:rotate-12 transition-transform duration-300">
-                                <i data-lucide="dna" class="text-white w-7 h-7"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800 group-hover:text-green-600 transition-colors">
-                                Bioinformatics</h3>
-                        </div>
-                        <ul class="space-y-4 text-gray-600">
-                            <li class="flex items-center gap-2">
-                                <span class="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                                Contrastive Learning Strategies
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-2 h-2 bg-teal-400 rounded-full"></span>
-                                LLMs for Molecular Property Prediction
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-2 h-2 bg-purple-400 rounded-full"></span>
-                                <!-- Generalisability: Grokking <span class="tag bg-gradient-to-r from-purple-100 to-indigo-100 text-purple-700 border border-purple-200">Fascinating!</span> -->
-                                Prompt Engineering & Agentic Work flows
-                            </li>
-                        </ul>
-                    </div>
+                <div class="border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Bioinformatics</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            <span>Contrastive Learning Strategies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            <span>LLMs for Molecular Property Prediction</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            <span>Prompt Engineering & Agentic Workflows</span>
+                        </li>
+                    </ul>
                 </div>
 
-
-                <!-- Card 4 -->
-                <div
-                    class="orbital-card group bg-white/70 backdrop-blur-lg rounded-3xl p-8 hover:scale-105 hover:rotate-1 transition-all duration-500 shadow-lg hover:shadow-2xl border border-blue-100">
-                    <div class="orbital-text">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div
-                                class="bg-gradient-to-r from-pink-400 to-rose-500 p-4 rounded-2xl group-hover:rotate-12 transition-transform duration-300">
-                                <i data-lucide="beaker" class="text-white w-7 h-7"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800 group-hover:text-pink-600 transition-colors">
-                                Future Explorations</h3>
-                        </div>
-                        <ul class="space-y-4 text-gray-600">
-                            <li class="flex items-center gap-2">
-                                <span class="w-2 h-2 bg-rose-400 rounded-full"></span>
-                                Reasoning paths in LLMs
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-2 h-2 bg-violet-400 rounded-full"></span>
-                                Multimodel LLM Biases
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-2 h-2 bg-stone-400 rounded-full"></span>
-                                <!-- Multi-modality <span class="tag bg-gradient-to-r from-stone-100 to-gray-100 text-stone-700 border border-stone-200">Super exciting!</span> -->
-                                Fair & Ethical AI
-                            </li>
-                        </ul>
-                    </div>
+                <div class="border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Future Explorations</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            <span>Reasoning Paths in LLMs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            <span>Multimodal LLM Biases</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            <span>Fair & Ethical AI</span>
+                        </li>
+                    </ul>
                 </div>
-
             </div>
         </div>
     </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="orbital-container bg-gradient-to-br from-gray-50 to-slate-100 py-24 relative">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50"></div>
-
-        <div class="relative max-w-7xl mx-auto px-6">
-            <h2
-                class="text-5xl md:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-                My Skills
-            </h2>
-            <p class="text-center text-gray-600 text-lg mb-16 max-w-3xl mx-auto">
-                A structured overview of my technical expertise — grouped by area so you can see where I shine.
-            </p>
-
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-
-                <!-- Programming -->
-                <div
-                    class="orbital-card group bg-white/80 backdrop-blur-lg rounded-3xl p-8 hover:scale-105 hover:shadow-2xl transition-all duration-500 border border-indigo-100">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div
-                            class="bg-gradient-to-r from-indigo-400 to-purple-500 p-4 rounded-2xl group-hover:rotate-12 transition-transform duration-300">
-                            <i data-lucide="code" class="text-white w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 group-hover:text-indigo-600 transition-colors">
-                            Programming</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center gap-2"><span
-                                class="w-2 h-2 bg-indigo-400 rounded-full"></span>Python</li>
-                        <li class="flex items-center gap-2"><span
-                                class="w-2 h-2 bg-purple-400 rounded-full"></span>JavaScript / TypeScript</li>
-                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-pink-400 rounded-full"></span>C++ /
-                            C / C#</li>
-                        <li class="flex items-center gap-2"><span
-                                class="w-2 h-2 bg-green-400 rounded-full"></span>Matlab</li>
-                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-amber-400 rounded-full"></span>SQL
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- AI & ML Tools -->
-                <div
-                    class="orbital-card group bg-white/80 backdrop-blur-lg rounded-3xl p-8 hover:scale-105 hover:shadow-2xl transition-all duration-500 border border-pink-100">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div
-                            class="bg-gradient-to-r from-pink-400 to-rose-500 p-4 rounded-2xl group-hover:rotate-12 transition-transform duration-300">
-                            <i data-lucide="brain" class="text-white w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 group-hover:text-pink-600 transition-colors">AI & ML
-                        </h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center gap-2"><span
-                                class="w-2 h-2 bg-pink-400 rounded-full"></span>PyTorch</li>
-                        <li class="flex items-center gap-2"><span
-                                class="w-2 h-2 bg-rose-400 rounded-full"></span>TensorFlow</li>
-                        <li class="flex items-center gap-2"><span
-                                class="w-2 h-2 bg-purple-400 rounded-full"></span>scikit-learn</li>
-                        <li class="flex items-center gap-2"><span
-                                class="w-2 h-2 bg-fuchsia-400 rounded-full"></span>Transformers</li>
-                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-indigo-400 rounded-full"></span>NLTK
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Data & Tools -->
-                <div
-                    class="orbital-card group bg-white/80 backdrop-blur-lg rounded-3xl p-8 hover:scale-105 hover:shadow-2xl transition-all duration-500 border border-green-100">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div
-                            class="bg-gradient-to-r from-green-400 to-emerald-500 p-4 rounded-2xl group-hover:rotate-12 transition-transform duration-300">
-                            <i data-lucide="database" class="text-white w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 group-hover:text-green-600 transition-colors">Data &
-                            Tools</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-green-400 rounded-full"></span>NumPy
-                            & Pandas</li>
-                        <li class="flex items-center gap-2"><span
-                                class="w-2 h-2 bg-teal-400 rounded-full"></span>GeoPandas</li>
-                        <li class="flex items-center gap-2"><span
-                                class="w-2 h-2 bg-emerald-400 rounded-full"></span>DynamoDB</li>
-                        <li class="flex items-center gap-2"><span
-                                class="w-2 h-2 bg-lime-400 rounded-full"></span>Matplotlib & Seaborn</li>
-                    </ul>
-                </div>
-
-                <!-- Development -->
-                <div
-                    class="orbital-card group bg-white/80 backdrop-blur-lg rounded-3xl p-8 hover:scale-105 hover:shadow-2xl transition-all duration-500 border border-blue-100">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div
-                            class="bg-gradient-to-r from-blue-400 to-cyan-500 p-4 rounded-2xl group-hover:rotate-12 transition-transform duration-300">
-                            <i data-lucide="cpu" class="text-white w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
-                            Development</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full"></span>React
-                            & MERN Stack</li>
-                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-sky-400 rounded-full"></span>Redux
-                        </li>
-                        <li class="flex items-center gap-2"><span
-                                class="w-2 h-2 bg-cyan-400 rounded-full"></span>Tailwind CSS</li>
-                    </ul>
-                </div>
-
-                <!-- Cloud & DevOps -->
-                <div
-                    class="orbital-card group bg-white/80 backdrop-blur-lg rounded-3xl p-8 hover:scale-105 hover:shadow-2xl transition-all duration-500 border border-purple-100">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div
-                            class="bg-gradient-to-r from-purple-400 to-violet-500 p-4 rounded-2xl group-hover:rotate-12 transition-transform duration-300">
-                            <i data-lucide="cloud" class="text-white w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 group-hover:text-purple-600 transition-colors">Cloud
-                            & DevOps</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-purple-400 rounded-full"></span>AWS
-                        </li>
-                        <li class="flex items-center gap-2"><span
-                                class="w-2 h-2 bg-violet-400 rounded-full"></span>Google APIs</li>
-                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-indigo-400 rounded-full"></span>Neon
-                            Postgre</li>
-                    </ul>
-                </div>
-
-                <!-- Other -->
-                <div
-                    class="orbital-card group bg-white/80 backdrop-blur-lg rounded-3xl p-8 hover:scale-105 hover:shadow-2xl transition-all duration-500 border border-amber-100">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div
-                            class="bg-gradient-to-r from-amber-400 to-yellow-500 p-4 rounded-2xl group-hover:rotate-12 transition-transform duration-300">
-                            <i data-lucide="sparkles" class="text-white w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 group-hover:text-amber-600 transition-colors">Other
-                        </h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center gap-2"><span
-                                class="w-2 h-2 bg-yellow-400 rounded-full"></span>Gradio</li>
-                        <li class="flex items-center gap-2"><span
-                                class="w-2 h-2 bg-orange-400 rounded-full"></span>LaTeX</li>
-                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-amber-400 rounded-full"></span>Unity
-                        </li>
-                        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-red-400 rounded-full"></span>Hugging
-                            Face</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
 
     <!-- PROJECTS -->
-    <section id="projects" class="bg-gradient-to-br from-white via-slate-50 to-gray-100 py-24 relative overflow-hidden">
-        <!-- Background elements -->
-        <div
-            class="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-blue-200/20 to-purple-200/20 rounded-full blur-3xl">
-        </div>
-        <div
-            class="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tr from-indigo-200/20 to-cyan-200/20 rounded-full blur-3xl">
-        </div>
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Selected Projects</h2>
 
-        <div class="relative max-w-7xl mx-auto px-6">
-            <h2
-                class="text-5xl md:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Featured Projects
-            </h2>
-            <p class="text-center text-gray-600 text-lg mb-16 max-w-3xl mx-auto">
-                A showcase of my recent work and research. Each project represents a unique challenge and innovative
-                solution. (Click for project GitHub)
-            </p>
+            <div class="grid gap-8 md:grid-cols-2">
 
-            <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-
-                <!-- PakBBQ -->
-                <a href="https://anonymous.4open.science/r/PakBBQ-Bias-Benchmarking-QA-Dataset-DBA5/README.md"
-                    target="_blank"
-                    class="group bg-white/90 backdrop-blur-lg rounded-3xl overflow-hidden hover:scale-105 hover:rotate-1 hover:shadow-2xl transition-all duration-500 flex flex-col border border-gray-200/50">
-                    <div class="relative overflow-hidden">
-                        <img src="Images/background-concept-wordcloud-illustration-of-bias-C3W2YB 2.jpg"
-                            alt="PakBBQ QA Benchmark"
-                            class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <!-- Project 1 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                    <img src="Images/background-concept-wordcloud-illustration-of-bias-C3W2YB 2.jpg"
+                         alt="PakBBQ" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-500">2025</span>
+                            <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded">Senior Year Project</span>
                         </div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <div class="flex justify-between items-center text-sm mb-4">
-                            <span class="text-gray-500 font-medium">2025</span>
-                            <span
-                                class="bg-gradient-to-r from-purple-100 to-indigo-100 text-purple-700 px-4 py-2 rounded-full font-semibold border border-purple-200">Senior
-                                Year Project</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors">
-                            PakBBQ: Bias Benchmark</h3>
-                        <p class="text-gray-600 text-sm flex-grow leading-relaxed">First culturally adapted QA benchmark
-                            for multilingual LLM bias evaluation in the Pakistani context.</p>
-
-                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            Dataset of 17,180 QA examples in Urdu and English across 8 sociocultural bias categories.
-                            Disambiguated prompts boosted accuracy by ~12 points, and negatively framed
-                            questions reduced stereotypes across both languages. Cross linguistic gaps remained, with
-                            Urdu trailing English by
-                            7–17 points due to data scarcity and higher prompt sensitivity.
-
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">PakBBQ: Bias Benchmark</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            First culturally adapted QA benchmark for multilingual LLM bias evaluation in the Pakistani context. Dataset of 17,180 QA examples in Urdu and English across 8 sociocultural bias categories.
                         </p>
-                        <!-- <div class="flex flex-wrap gap-2 mt-6">
-                            <span class="tech-pill-light">Python</span>
-                            <span class="tech-pill-light">LLMs</span>
-                            <span class="tech-pill-light">Bias Analysis</span>
-                        </div> -->
+                        <a href="https://anonymous.4open.science/r/PakBBQ-Bias-Benchmarking-QA-Dataset-DBA5/README.md"
+                           target="_blank" class="text-blue-600 hover:underline text-sm">View Project →</a>
                     </div>
-                </a>
+                </div>
 
-                <!-- Bias Mitigation DL -->
-                <a href="https://github.com/Hashmat02/Multi-Teacher-Single-Student-Confidence-Aware-Knowledge-Distillation.git"
-                    target="_blank"
-                    class="group bg-white/90 backdrop-blur-lg rounded-3xl overflow-hidden hover:scale-105 hover:rotate-1 hover:shadow-2xl transition-all duration-500 flex flex-col border border-gray-200/50">
-                    <div class="relative overflow-hidden">
-                        <img src="Images/0*Gaq2K9XqoCcXhigq.jpg" alt="Bias Mitigation in Deep Learning"
-                            class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <!-- Project 2 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                    <img src="Images/0*Gaq2K9XqoCcXhigq.jpg"
+                         alt="Knowledge Distillation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-500">2025</span>
+                            <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded">Research Project</span>
                         </div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <div class="flex justify-between items-center text-sm mb-4">
-                            <span class="text-gray-500 font-medium">2025</span>
-                            <span
-                                class="bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-700 px-4 py-2 rounded-full font-semibold border border-blue-200">Independent
-                                Research Project</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">
-                            Bias Mitigation Knowledge Distillation</h3>
-                        <p class="text-gray-600 text-sm flex-grow leading-relaxed">Knowledge distillation framework
-                            reducing inductive biases and improving generalization.</p>
-                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            Achieved balanced bias (Shape: 0.49, Texture: 0.51) with confidence-aware KD, improving
-                            results on Stylized
-                            ImageNet and Canny Edge datasets over single-teacher and naive ensemble baselines. Base
-                            models showed strong
-                            bias tendencies (VGG-16: 81% texture, ViT: 59% shape)</p>
-                        <!-- <div class="flex flex-wrap gap-2 mt-6">
-                            <span class="tech-pill-light">PyTorch</span>
-                            <span class="tech-pill-light">CNN</span>
-                            <span class="tech-pill-light">Vision Transformers</span>
-                        </div> -->
-                    </div>
-                </a>
-
-                 <!-- AI for All -->
-                 <a href="https://github.com/Hashmat02/Evaluating-Open-Source-LLMS-and-Transformer-Models-in-low-resources-settings.git"
-                 target="_blank"
-                 class="group bg-white/90 backdrop-blur-lg rounded-3xl overflow-hidden hover:scale-105 hover:rotate-1 hover:shadow-2xl transition-all duration-500 flex flex-col border border-gray-200/50">
-                 <div class="relative overflow-hidden">
-                     <img src="Images/wp12372437.jpg" alt="AI for All"
-                         class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500">
-                     <div
-                         class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                     </div>
-                 </div>
-                 <div class="p-8 flex flex-col flex-grow">
-                     <div class="flex justify-between items-center text-sm mb-4">
-                         <span class="text-gray-500 font-medium">2024</span>
-                         <span
-                             class="bg-gradient-to-r from-orange-100 to-amber-100 text-orange-700 px-4 py-2 rounded-full font-semibold border border-orange-200">Low
-                             Resource NLP/Jailbreaking</span>
-                     </div>
-                     <h3 class="text-2xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors">
-                         AI for All</h3>
-                     <p class="text-gray-600 text-sm flex-grow leading-relaxed">Evaluating LLMs and transformers in
-                         low-resource languages with bias and jailbreak testing.</p>
-                     <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                         Assessed lightweight transformers and open-source LLMs on Sindhi, Pashto, and Urdu,
-                         analyzing robustness under
-                         perturbations and jailbreak attempts, with Llama 3-B reaching a 20% success rate.
-                     </p>
-                     <!-- <div class="flex flex-wrap gap-2 mt-6">
-                         <span class="tech-pill-light">LLMs</span>
-                         <span class="tech-pill-light">Transformers</span>
-                         <span class="tech-pill-light">Urdu NLP</span>
-                     </div> -->
-                 </div>
-             </a>
-
-                <!-- AI Stock Insights -->
-                <a href="https://github.com/HassanAli101/PSX-DataPortal.git" target="_blank"
-                    class="group bg-white/90 backdrop-blur-lg rounded-3xl overflow-hidden hover:scale-105 hover:rotate-1 hover:shadow-2xl transition-all duration-500 flex flex-col border border-gray-200/50">
-                    <div class="relative overflow-hidden">
-                        <img src="Images/images-2.jpeg" alt="AI Stock Insights Platform"
-                            class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        </div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <div class="flex justify-between items-center text-sm mb-4">
-                            <span class="text-gray-500 font-medium">2024</span>
-                            <span
-                                class="bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-700 px-4 py-2 rounded-full font-semibold border border-emerald-200">AWS
-                                & Claude</span>
-                        </div>
-                        <h3
-                            class="text-2xl font-bold text-gray-800 mb-3 group-hover:text-emerald-600 transition-colors">
-                            AI-Driven Stock Insights</h3>
-                        <p class="text-gray-600 text-sm flex-grow leading-relaxed">AWS-based platform for real-time
-                            stock trend analysis with an AI chatbot for insights.</p>
-                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            Integrated S3, Lambda, ECS, and Neon Postgres for automated stock report processing and
-                            trend tracking.
-                            Built an LLM-powered chatbot to analyze market data and deliver actionable customer
-                            insights.
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Bias Mitigation Knowledge Distillation</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Achieved balanced bias (Shape: 0.49, Texture: 0.51) with confidence-aware KD, improving results on Stylized ImageNet and Canny Edge datasets.
                         </p>
-                        <!-- <div class="flex flex-wrap gap-2 mt-6">
-                            <span class="tech-pill-light">AWS</span>
-                            <span class="tech-pill-light">LLMs</span>
-                            <span class="tech-pill-light">Postgres</span>
-                        </div> -->
+                        <a href="https://github.com/Hashmat02/Multi-Teacher-Single-Student-Confidence-Aware-Knowledge-Distillation.git"
+                           target="_blank" class="text-blue-600 hover:underline text-sm">View Project →</a>
                     </div>
-                </a>
+                </div>
 
-
-            
-
-                <!-- Data Science Chatbot -->
-                <a href="https://github.com/Hashmat02/DataScience-Chatbot.git" target="_blank"
-                    class="group bg-white/90 backdrop-blur-lg rounded-3xl overflow-hidden hover:scale-105 hover:rotate-1 hover:shadow-2xl transition-all duration-500 flex flex-col border border-gray-200/50">
-                    <div class="relative overflow-hidden">
-                        <img src="Images/370797-data-science-wallpaper-top-free-data-science-background.jpg"
-                            alt="Data Science Chatbot"
-                            class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <!-- Project 3 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                    <img src="Images/wp12372437.jpg"
+                         alt="AI for All" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-500">2024</span>
+                            <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded">Low-Resource NLP</span>
                         </div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <div class="flex justify-between items-center text-sm mb-4">
-                            <span class="text-gray-500 font-medium">2024</span>
-                            <span
-                                class="bg-gradient-to-r from-teal-100 to-cyan-100 text-teal-700 px-4 py-2 rounded-full font-semibold border border-teal-200">Agentic AI</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3 group-hover:text-teal-600 transition-colors">
-                            End-to-End Data Science Chatbot</h3>
-                        <p class="text-gray-600 text-sm flex-grow leading-relaxed">Generative AI-powered chatbot for
-                            EDA, statistical analysis, and data cleaning.</p>
-                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            Fine-tuned GPT-3.5 to process 10+ data formats, enabling intuitive analysis for non-experts,
-                            and deployed
-                            on Hugging Face using Gradio for seamless accessibility.
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">AI for All</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Evaluated LLMs and transformers in low-resource languages with bias and jailbreak testing. Assessed lightweight transformers on Sindhi, Pashto, and Urdu.
                         </p>
-                        <!-- <div class="flex flex-wrap gap-2 mt-6">
-                            <span class="tech-pill-light">Llama 3</span>
-                            <span class="tech-pill-light">Gradio</span>
-                            <span class="tech-pill-light">Hugging Face</span>
-                        </div> -->
+                        <a href="https://github.com/Hashmat02/Evaluating-Open-Source-LLMS-and-Transformer-Models-in-low-resources-settings.git"
+                           target="_blank" class="text-blue-600 hover:underline text-sm">View Project →</a>
                     </div>
-                </a>
+                </div>
 
-
-                <!-- Platformer Unity Game -->
-                <a href="https://github.com/Hashmat02/Caverns-of-Eternity-Platformer-Game.git" target="_blank"
-                    class="group bg-white/90 backdrop-blur-lg rounded-3xl overflow-hidden hover:scale-105 hover:rotate-1 hover:shadow-2xl transition-all duration-500 flex flex-col border border-gray-200/50">
-                    <div class="relative overflow-hidden">
-                        <img src="Images/Screenshot 2025-08-10 at 3.21.41 AM.png" alt="Data Science Chatbot"
-                            class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <!-- Project 4 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                    <img src="Images/images-2.jpeg"
+                         alt="AI Stock Insights" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-500">2024</span>
+                            <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded">AWS & LLMs</span>
                         </div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <div class="flex justify-between items-center text-sm mb-4">
-                            <span class="text-gray-500 font-medium">2024</span>
-                            <span
-                                class="bg-gradient-to-r from-teal-100 to-cyan-100 text-teal-700 px-4 py-2 rounded-full font-semibold border border-teal-200">Game Development</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3 group-hover:text-teal-600 transition-colors">
-                            UNITY Platformer Game</h3>
-                        <p class="text-gray-600 text-sm flex-grow leading-relaxed">
-                            2D platformer game built in Unity with puzzle-solving, traps, and a historical adventure
-                            theme.
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">AI-Driven Stock Insights</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            AWS-based platform for real-time stock trend analysis. Integrated S3, Lambda, ECS, and Neon Postgres with an LLM-powered chatbot.
                         </p>
-                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            Features 10+ levels with hand-drawn pixel art, dynamic lighting, and progressively
-                            challenging gameplay to
-                            enhance player immersion and engagement.
-                        </p>
-
-                        <!-- <div class="flex flex-wrap gap-2 mt-6">
-                            <span class="tech-pill-light">Llama 3</span>
-                            <span class="tech-pill-light">Gradio</span>
-                            <span class="tech-pill-light">Hugging Face</span>
-                        </div> -->
+                        <a href="https://github.com/HassanAli101/PSX-DataPortal.git"
+                           target="_blank" class="text-blue-600 hover:underline text-sm">View Project →</a>
                     </div>
-                </a>
+                </div>
 
             </div>
         </div>
     </section>
 
-<!-- SCROLL PROGRESS INDICATOR -->
-<div class="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 hidden lg:block">
-    <nav class="flex flex-col gap-4">
-        <a href="#about" class="scroll-dot group relative" data-section="about">
-            <div
-                class="w-3 h-3 rounded-full bg-white/30 border-2 border-gray-400 transition-all duration-300 group-hover:scale-125">
-            </div>
-            <span
-                class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800/90 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap backdrop-blur-sm">About</span>
-        </a>
-
-        <a href="#pakbbq" class="scroll-dot group relative" data-section="pakbbq">
-            <div
-                class="w-3 h-3 rounded-full bg-white/30 border-2 border-gray-400 transition-all duration-300 group-hover:scale-125">
-            </div>
-            <span
-                class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800/90 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap backdrop-blur-sm">Publications</span>
-        </a>
-
-        <a href="#research" class="scroll-dot group relative" data-section="research">
-            <div
-                class="w-3 h-3 rounded-full bg-white/30 border-2 border-gray-400 transition-all duration-300 group-hover:scale-125">
-            </div>
-            <span
-                class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800/90 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap backdrop-blur-sm">Research</span>
-        </a>
-
-        <a href="#skills" class="scroll-dot group relative" data-section="skills">
-            <div
-                class="w-3 h-3 rounded-full bg-white/30 border-2 border-gray-400 transition-all duration-300 group-hover:scale-125">
-            </div>
-            <span
-                class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800/90 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap backdrop-blur-sm">Skills</span>
-        </a>
-
-        <a href="#projects" class="scroll-dot group relative" data-section="projects">
-            <div
-                class="w-3 h-3 rounded-full bg-white/30 border-2 border-gray-400 transition-all duration-300 group-hover:scale-125">
-            </div>
-            <span
-                class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800/90 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap backdrop-blur-sm">Projects</span>
-        </a>
-    </nav>
-</div>
-
-
     <!-- FOOTER -->
-    <footer class="bg-gradient-to-br from-gray-100 to-slate-200 text-gray-700 py-16 relative overflow-hidden">
-        <!-- Background decorative elements -->
-        <div
-            class="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-blue-200/30 to-transparent rounded-full blur-3xl">
-        </div>
-        <div
-            class="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-purple-200/30 to-transparent rounded-full blur-3xl">
-        </div>
+    <footer class="bg-white border-t border-gray-200 py-12">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-600 mb-6">
+                Interested in research collaborations, PhD/MS opportunities, or innovative projects? Feel free to reach out.
+            </p>
 
-        <div class="relative max-w-4xl mx-auto px-6 text-center">
-            <div class="mb-8">
-                <h3
-                    class="text-2xl font-bold mb-4 bg-gradient-to-r from-gray-700 to-blue-600 bg-clip-text text-transparent">
-                    Let's Connect & Collaborate
-                </h3>
-                <p class="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                    I'm always excited to discuss new opportunities, research collaborations, PhDs/MS or innovative projects.
-                    Feel free to reach out!
-                </p>
-            </div>
-
-            <div class="flex justify-center gap-6 mb-8">
-                <a href="https://github.com/Hashmat02" aria-label="GitHub" target="_blank" rel="noopener noreferrer"
-                    class="group w-16 h-16 flex items-center justify-center rounded-2xl bg-white/80 backdrop-blur-lg border border-gray-200 hover:scale-110 hover:rotate-6 hover:shadow-lg transition-all duration-300">
-                    <i data-lucide="github" class="w-7 h-7 text-gray-600 group-hover:text-gray-800"></i>
+            <div class="flex justify-center gap-6 mb-6">
+                <a href="https://github.com/Hashmat02" target="_blank" class="text-gray-600 hover:text-gray-900">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
                 </a>
-                <a href="https://www.linkedin.com/in/abdullah-hashmat" aria-label="LinkedIn" target="_blank"
-                    rel="noopener noreferrer"
-                    class="group w-16 h-16 flex items-center justify-center rounded-2xl bg-white/80 backdrop-blur-lg border border-gray-200 hover:scale-110 hover:rotate-6 hover:shadow-lg transition-all duration-300">
-                    <i data-lucide="linkedin" class="w-7 h-7 text-blue-600 group-hover:text-blue-700"></i>
+                <a href="https://www.linkedin.com/in/abdullah-hashmat" target="_blank" class="text-gray-600 hover:text-gray-900">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
                 </a>
-                <a href="mailto:abdullah.hashmat02@gmail.com" aria-label="Email"
-                    class="group w-16 h-16 flex items-center justify-center rounded-2xl bg-white/80 backdrop-blur-lg border border-gray-200 hover:scale-110 hover:rotate-6 hover:shadow-lg transition-all duration-300">
-                    <i data-lucide="mail" class="w-7 h-7 text-rose-600 group-hover:text-rose-700"></i>
+                <a href="mailto:abdullah.hashmat02@gmail.com" class="text-gray-600 hover:text-gray-900">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
                 </a>
             </div>
 
-            <div class="border-t border-gray-300/50 pt-8">
-                <p class="text-sm text-gray-500">
-                    <!-- &copy; 2025 Your Name. Crafted with passion for AI and innovation. -->
-                </p>
-            </div>
+            <p class="text-sm text-gray-500">
+                © 2025 Abdullah Hashmat. All rights reserved.
+            </p>
         </div>
     </footer>
 
-
-
-    <!-- Custom Styles -->
-    <style>
-        /* Orbital Animation Styles */
-        .orbital-container {
-            perspective: 1000px;
-            overflow: hidden;
-        }
-
-        .orbital-card {
-            transform-origin: center center;
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-            opacity: 0;
-        }
-
-        /* Initial orbital positions (scattered in circle) */
-        .orbital-card:nth-child(1) {
-            transform: translate(-300px, -200px) rotate(45deg) scale(0.7);
-        }
-
-        .orbital-card:nth-child(2) {
-            transform: translate(300px, -250px) rotate(-60deg) scale(0.7);
-        }
-
-        .orbital-card:nth-child(3) {
-            transform: translate(-350px, 100px) rotate(120deg) scale(0.7);
-        }
-
-        .orbital-card:nth-child(4) {
-            transform: translate(250px, 150px) rotate(-30deg) scale(0.7);
-        }
-
-        .orbital-card:nth-child(5) {
-            transform: translate(-150px, 300px) rotate(90deg) scale(0.7);
-        }
-
-        .orbital-card:nth-child(6) {
-            transform: translate(180px, -100px) rotate(-120deg) scale(0.7);
-        }
-
-        /* Text rotation during orbital phase */
-        .orbital-card .orbital-text {
-            transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .orbital-card:nth-child(1) .orbital-text {
-            transform: rotate(-45deg);
-        }
-
-        .orbital-card:nth-child(2) .orbital-text {
-            transform: rotate(60deg);
-        }
-
-        .orbital-card:nth-child(3) .orbital-text {
-            transform: rotate(-120deg);
-        }
-
-        .orbital-card:nth-child(4) .orbital-text {
-            transform: rotate(30deg);
-        }
-
-        .orbital-card:nth-child(5) .orbital-text {
-            transform: rotate(-90deg);
-        }
-
-        .orbital-card:nth-child(6) .orbital-text {
-            transform: rotate(120deg);
-        }
-
-        /* Final settled positions */
-        .orbital-card.settled {
-            transform: translate(0, 0) rotate(0deg) scale(1) !important;
-            opacity: 1;
-        }
-
-        .orbital-card.settled .orbital-text {
-            transform: rotate(0deg) !important;
-        }
-
-        /* Staggered animation delays - made quicker */
-        .orbital-card:nth-child(1).settled {
-            transition-delay: 0.05s;
-        }
-
-        .orbital-card:nth-child(2).settled {
-            transition-delay: 0.1s;
-        }
-
-        .orbital-card:nth-child(3).settled {
-            transition-delay: 0.15s;
-        }
-
-        .orbital-card:nth-child(4).settled {
-            transition-delay: 0.2s;
-        }
-
-        .orbital-card:nth-child(5).settled {
-            transition-delay: 0.25s;
-        }
-
-        .orbital-card:nth-child(6).settled {
-            transition-delay: 0.3s;
-        }
-
-        /* Particle trail effect */
-        @keyframes particleTrail {
-            0% {
-                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
-            }
-
-            50% {
-                box-shadow: 0 0 30px 10px rgba(59, 130, 246, 0.3);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
-            }
-        }
-
-        .orbital-card.orbiting {
-            animation: particleTrail 0.6s ease-out;
-        }
-
-        /* Scroll indicator styling */
-        .scroll-dot.active .w-3 {
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            border-color: #3b82f6;
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-        }
-
-        /* Tag styling for research interests */
-        .tag {
-            @apply inline-block px-3 py-1 rounded-full text-xs font-semibold ml-2 transition-all duration-300 hover:scale-105;
-        }
-
-        /* Light theme skill pills */
-        .skill-pill-light {
-            @apply bg-gradient-to-r from-gray-100 to-slate-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 hover:scale-105 hover:shadow-md hover:from-gray-200 hover:to-slate-200 transition-all duration-300;
-        }
-
-        /* Light theme tech pills for projects */
-        .tech-pill-light {
-            @apply bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold border border-blue-200 hover:scale-105 hover:shadow-sm transition-all duration-300;
-        }
-
-        /* Custom animations */
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Custom gradient text animation */
-        @keyframes gradient {
-
-            0%,
-            100% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-        }
-
-        .animate-gradient {
-            background-size: 200% 200%;
-            animation: gradient 3s ease infinite;
-        }
-    </style>
-
-    <!-- JavaScript -->
     <script>
-        // Dynamic typing animation
-        const texts = [
-            "AI Bias Researcher",
-            "Machine Learning Engineer",
-            "Full Stack Developer",
-            "Data Scientist",
-            "LLM Specialist",
-            "Cloud Developer"
-        ];
+        // Mobile menu toggle
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
 
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        const typingElement = document.getElementById('dynamic-text');
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
 
-        function typeWriter() {
-            const currentText = texts[textIndex];
-
-            if (isDeleting) {
-                typingElement.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingElement.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
-            let typeSpeed = isDeleting ? 50 : 100;
-
-            if (!isDeleting && charIndex === currentText.length) {
-                typeSpeed = 2000;
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-            }
-
-            setTimeout(typeWriter, typeSpeed);
-        }
-
-        initOrbitalAnimation();
-
-        lucide.createIcons();
-
-        typeWriter();
-
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1118,108 +384,42 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
                 }
             });
         });
 
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            observer.observe(section);
-        });
-
-        function initOrbitalAnimation() {
-            const orbitalContainers = document.querySelectorAll('.orbital-container');
-
-            orbitalContainers.forEach(container => {
-                const orbitalCards = container.querySelectorAll('.orbital-card');
-
-                const orbitalObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            orbitalCards.forEach((card, index) => {
-                                card.classList.add('orbiting');
-                                setTimeout(() => {
-                                    card.classList.add('settled');
-                                    card.classList.remove('orbiting');
-                                }, index * 100 + 200); // 200ms initial delay + 100ms between each card
-                            });
-                        } else {
-                            orbitalCards.forEach(card => {
-                                card.classList.remove('settled', 'orbiting');
-                            });
-                        }
-                    });
-                }, {
-                    threshold: 0.3,
-                    rootMargin: '0px 0px -100px 0px'
-                });
-
-                orbitalObserver.observe(container);
-            });
-        }
-
-        // Scroll indicator functionality
-        const scrollDots = document.querySelectorAll('.scroll-dot');
+        // Highlight active section in navbar on scroll
         const sections = document.querySelectorAll('section, header');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
 
-        function updateScrollIndicator() {
-            const scrollPosition = window.scrollY + window.innerHeight / 2;
+        function highlightNavigation() {
+            const scrollPosition = window.scrollY + 100;
 
-            let activeSection = 'about';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
 
                 if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                    activeSection = section.id;
-                }
-            });
+                    navLinks.forEach(link => {
+                        link.classList.remove('text-gray-900', 'font-semibold');
+                        link.classList.add('text-gray-600');
 
-            scrollDots.forEach(dot => {
-                dot.classList.remove('active');
-                if (dot.dataset.section === activeSection) {
-                    dot.classList.add('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.remove('text-gray-600');
+                            link.classList.add('text-gray-900', 'font-semibold');
+                        }
+                    });
                 }
             });
         }
 
-        // Mobile menu toggle
-const menuBtn = document.getElementById("menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
-
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
-});
-
-
-        window.addEventListener('scroll', updateScrollIndicator);
-        updateScrollIndicator(); 
-
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.absolute');
-
-            parallaxElements.forEach(element => {
-                const speed = 0.2;
-                element.style.transform = `translateY(${scrolled * speed}px)`;
-            });
-        });
+        window.addEventListener('scroll', highlightNavigation);
+        highlightNavigation();
     </script>
 </body>
 
